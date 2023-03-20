@@ -1,12 +1,13 @@
-import Send from '../components/Send';
-import Receive from '../components/Receive';
+import Upload from '../components/Upload';
+import Download from '../components/Download';
+import './page.css';
 
 export default function Home() {
   return (
     <div>
-      <Send />
+      <Upload />
       <hr />
-      <Receive />
+      <Download />
     </div>
   )
 }

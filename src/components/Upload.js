@@ -5,7 +5,7 @@ import { useState } from "react";
 import QRCode from "react-qr-code";
 import { FileUploader } from "react-drag-drop-files";
 
-export default function Send() {
+export default function Upload() {
 
     const uploadURL = process.env.NEXT_PUBLIC_UPLOAD_URL;
 
@@ -20,14 +20,14 @@ export default function Send() {
 
         await axios.post(uploadURL, data)
             .then((response) => {
-                console.log(response)
+                console.log(response);
                 console.log(response.data.numericCode);
-                setQrCode(`http:localhost:5000/download/${response.data.numericCode}`)
-                setNumericCode(response.data.numericCode)
+                setQrCode(`${response.data.numericCode}`);
+                setNumericCode(response.data.numericCode);
             })
             .catch(error => console.log(error));
 
-        console.log("after axios")
+        console.log("after axios");
     }
 
     const handleChange = (file) => {
@@ -36,6 +36,7 @@ export default function Send() {
 
     return (
         <>
+            <h1>Upload</h1>
             <form action={uploadURL} method="post" encType="multipart/form-data">
                 <input type="file" onChange={event => {
                     const file = event.target.files[0];
