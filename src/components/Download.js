@@ -64,6 +64,7 @@ export default function Download() {
                             console.info(error);
                         }
                     }}
+                    constraints={ facingMode: 'user' }
                 />
             }
         </>
