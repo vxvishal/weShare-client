@@ -122,7 +122,6 @@ export default function Download() {
                             if (!!result) {
                                 setScanner(false);
                                 handleRequest(result?.text);
-                                preventDefault();
                             }
 
                             if (!!error) {
