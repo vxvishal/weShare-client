@@ -89,10 +89,11 @@ export default function Upload() {
                     <div className="lotties">
                         <h2 className="message">We are uploading your file. Please, wait!</h2>
                         <Lottie
-                            className="success-fail-lottie"
+                            className="upload-lottie"
                             loop
                             animationData={fileUploadIcon}
                             play
+                            style={{ width: 250, height: 250 }}
                         />
                     </div>
                 </div>
@@ -227,6 +228,10 @@ const GlobalStyle = createGlobalStyle`
     .success-fail-lottie {
         width: 250px;
       }
+
+    .upload-lottie {
+        width: 150px;
+    }
 }
 
 `;

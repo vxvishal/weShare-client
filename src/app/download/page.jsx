@@ -57,7 +57,6 @@ export default function Download() {
             xhr.onload = (event) => {
                 let blob = xhr.response;
                 let file = new File([blob], fileName, { type: blob.type });
-
                 let a = document.createElement("a");
                 document.body.appendChild(a);
                 a.download = file.name;
@@ -123,7 +122,6 @@ export default function Download() {
                                 setScanner(false);
                                 handleRequest(result?.text);
                             }
-
                             if (!!error) {
                                 setShowMain(false);
                                 setDownloadAnimation(false);
@@ -146,7 +144,6 @@ export default function Download() {
                         />
                     </div>
                 </div>
-
             }
             {
                 successAnimation &&
@@ -189,7 +186,6 @@ const GlobalStyle = createGlobalStyle`
     justify-content: center;
 }
 
-
 .option-title {
     font-size: 2rem;
     color: white;
@@ -202,7 +198,7 @@ const GlobalStyle = createGlobalStyle`
 
 input {
     font-size: 2.5rem;
-    background-color: white;
+    color: black;
 }
 
 .wrapper{
