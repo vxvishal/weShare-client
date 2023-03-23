@@ -3,7 +3,6 @@ import { createGlobalStyle } from "styled-components"
 
 export default function FileDrop(props) {
 
-    const [showFileName, setShowFileName] = useState(false);
     return (
         <>
             <GlobalStyle />

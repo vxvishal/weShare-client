@@ -127,7 +127,6 @@ export default function Download() {
                             if (!!error) {
                                 setShowMain(false);
                                 setDownloadAnimation(false);
-                                // setShowError(true);
                                 console.info(error);
                             }
                         }}
@@ -190,9 +189,6 @@ const GlobalStyle = createGlobalStyle`
     justify-content: center;
 }
 
-.element-spacing {
-    // margin: 0 1rem 0 1rem;
-}
 
 .option-title {
     font-size: 2rem;
@@ -201,7 +197,6 @@ const GlobalStyle = createGlobalStyle`
 
 .otp-span {
     margin: 0 1rem 0 1rem;
-    // font-size: 2rem;
     color: white;
 }   
 
@@ -279,7 +274,6 @@ input {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    // height: 80vh;
     margin-top: 5%;
   }
 

@@ -54,11 +54,12 @@ export default function Upload() {
                     <h1 className="title">Choose a file</h1>
                     <FileUploader
                         className="file-uploader"
-                        children={<FileDrop fileName={fileName} />}
                         multiple={false}
                         handleChange={handleChange}
                         name="file"
-                    />
+                    >
+                        <FileDrop fileName={fileName} />
+                    </FileUploader>
                     <div className="wrapper">
                         <button className="download-button" type="submit" onClick={() => {
                             setShowMain(false);
