@@ -117,6 +117,7 @@ export default function Download() {
                 <div className="scanner">
                     <h2 className="titles">Scan the file QR Code</h2>
                     <QrReader
+                        constraints={{ facingMode: 'environment' }}
                         onResult={(result, error) => {
                             if (!!result) {
                                 setScanner(false);
